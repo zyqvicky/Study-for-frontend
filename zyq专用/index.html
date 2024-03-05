@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到笑笑的世界！</title>
+    <link rel="shortcut favicon" href="favicon.ico" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background: url(./images/bgc2.jpg) no-repeat fixed;
+            background-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .bear {
+            position: absolute;
+            top: 600px;
+            width: 200px;
+            height: 100px;
+            background: url(images/bear.png) no-repeat;
+            z-index: 1;
+            /* 元素可以添加多个动画，用逗号分隔 */
+            animation: bear 1s steps(8) infinite, bearmove 3s forwards;
+        }
+
+        .mountain1 {
+            position: absolute;
+            top: 400px;
+            width: 1920px;
+            height: 336px;
+            background: url(images/bg1.png) no-repeat;
+            animation: mountain1 70s infinite forwards;
+        }
+
+        .mountain2 {
+            position: absolute;
+            top: 135px;
+            width: 1920px;
+            height: 569px;
+            background: url(images/bg2.png) no-repeat;
+            z-index: -1;
+            animation: mountain2 150s infinite forwards;
+        }
+
+        .greet {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 855px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            white-space: nowrap;
+            font-size: 45px;
+            color: #fff;
+            animation: greet 2s linear forwards;
+        }
+
+        .welcome {
+            position: absolute;
+            width: 120px;
+            height: 50px;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            color: #fff;
+            white-space: nowrap;
+            text-decoration: underline;
+        }
+
+        .welcome a {
+            color: #fff;
+        }
+
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+
+        @keyframes bearmove {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes mountain1 {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1920px 0;
+            }
+        }
+
+        @keyframes mountain2 {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1920px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bear"></div>
+    <div class="mountain1"></div>
+    <div class="mountain2"></div>
+    <div class="greet">
+        Welcome to my world!
+    </div>
+
+    <div class="welcome">
+        <a href="play.html">点击进入</a>
+    </div>
+</body>
+
+</html>

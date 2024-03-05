@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请选择——</title>
+    <style>
+        @font-face {
+            font-family: 'tuhua';
+            src: url('pfpinfanhututi.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            background: url(images/bgci.jpg) round;
+        }
+
+        ul {
+            width: 100%;
+            height: 584px;
+        }
+
+        ul li {
+            float: left;
+            list-style: none;
+        }
+
+        .reply,
+        .fun2,
+        .fun3 {
+            width: 270px;
+            height: 584px;
+            margin: 0 120px;
+            border-radius: 40px;
+            box-shadow: 0 1px 10px #fff;
+        }
+
+        .reply {
+            background: url(images/item1.jpg) round;
+        }
+
+        .reply:hover {
+            transform: scale(1.1, 1.1);
+            transition: transform .5s;
+        }
+
+        .reply a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .board1,
+        .board2,
+        .board3 {
+            display: none;
+            position: relative;
+            top: 50px;
+            width: 200px;
+            height: 70px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 70px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .fun2 {
+            background: url(images/item2.jpg) round;
+        }
+
+        .fun2:hover {
+            transform: scale(1.1, 1.1);
+            transition: transform .5s;
+        }
+
+        .fun3 {
+            background: url(images/item3.jpg) round;
+        }
+
+        .fun3:hover {
+            transform: scale(1.1, 1.1);
+            transition: transform .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="reply">
+                <div class="board1">留言板</div>
+                <a href="replybd.html"></a>
+            </div>
+        </li>
+        <li>
+            <div class="fun2">
+                <div class="board2">敬请期待</div>
+            </div>
+        </li>
+        <li>
+            <div class="fun3">
+                <div class="board3">敬请期待</div>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        const div1 = document.querySelector('.reply')
+        const div2 = document.querySelector('.fun2')
+        const div3 = document.querySelector('.fun3')
+        const bd1 = document.querySelector('.board1')
+        const bd2 = document.querySelector('.board2')
+        const bd3 = document.querySelector('.board3')
+
+        div1.addEventListener('mouseenter', function () {
+            bd1.style.display = 'block'
+        })
+
+        div1.addEventListener('mouseleave', function () {
+            bd1.style.display = 'none'
+        })
+
+        div2.addEventListener('mouseenter', function () {
+            bd2.style.display = 'block'
+        })
+
+        div2.addEventListener('mouseleave', function () {
+            bd2.style.display = 'none'
+        })
+
+        div3.addEventListener('mouseenter', function () {
+            bd3.style.display = 'block'
+        })
+
+        div3.addEventListener('mouseleave', function () {
+            bd3.style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>
