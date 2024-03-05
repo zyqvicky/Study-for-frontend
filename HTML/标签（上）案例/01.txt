@@ -1,0 +1,10 @@
+<html></html>        //标签通常成双成对的
+<br />               //单标签
+
+标签关系：
+包含和并列。
+
+<html>
+   <head></head>
+   <body></body>
+</html>
